@@ -8,45 +8,45 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <style>
         html { scroll-behavior: smooth; }
-        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #333; }
+        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #333; line-height: 1.6; }
         
-        /* Hero Section */
+        /* Hero Section con la vista desde la camioneta */
         .hero-section { 
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/australia-field.jpg');
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/20240414_090558.webp');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
             color: white;
-            padding: 150px 0;
+            padding: 160px 0;
             text-align: center;
         }
 
-        .logo-gp { 
-            max-width: 180px; 
-            height: auto;
-            margin-bottom: 20px;
-        }
+        .logo-gp { max-width: 160px; margin-bottom: 20px; }
 
-        /* Espaciado de Secciones corregido */
-        .section-padding { 
-            padding: 120px 0; 
-        }
+        .section-padding { padding: 120px 0; }
         
         .profile-img { 
             width: 100%; 
             max-height: 500px;
             object-fit: cover; 
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
         }
 
-        .btn-primary { background-color: #0056b3; border: none; padding: 12px 30px; }
-        .btn-outline-light { padding: 12px 30px; }
+        .australia-img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            margin-top: 30px;
+        }
+
+        .btn-primary { background-color: #0056b3; border: none; padding: 12px 35px; border-radius: 30px; font-weight: bold; transition: 0.3s; }
+        .btn-primary:hover { background-color: #004494; transform: translateY(-2px); }
+        .btn-outline-light { padding: 12px 35px; border-radius: 30px; font-weight: bold; }
         
-        .footer { background: #1a1a1a; color: #888; padding: 40px 0; }
+        .footer { background: #111; color: #777; padding: 50px 0; }
         
-        /* Estilo para los checks de la lista */
-        .list-unstyled li { margin-bottom: 10px; }
+        .bg-custom-light { background-color: #fcfcfc; }
     </style>
 </head>
 <body>
@@ -58,6 +58,7 @@
                 <a class="nav-link" href="#about">About</a>
                 <a class="nav-link" href="#experience">Australia</a>
                 <a class="nav-link" href="https://www.linkedin.com/in/guillermo-pierobon" target="_blank">LinkedIn</a>
+                <a class="nav-link btn btn-outline-primary btn-sm ms-lg-3 text-white" href="CV-Guillermo-Pierobon.pdf" download>Download CV</a>
             </div>
         </div>
     </nav>
@@ -66,54 +67,49 @@
         <div class="container">
             <img src="images/logo-gp-transparente.png" alt="Logo GP" class="logo-gp" style="filter: brightness(0) invert(1);">
             <h1 class="display-3 fw-bold">Geological Expertise meets Data Science</h1>
-            <p class="lead mb-5">Bridging the gap between field exploration and analytical innovation.</p>
-            <a href="#about" class="btn btn-primary btn-lg me-3">Learn More</a>
-            <a href="https://www.linkedin.com/in/guillermo-pierobon" class="btn btn-outline-light btn-lg">Contact Me</a>
+            <p class="lead mb-5 fs-3">Bridging the gap between field exploration and analytical innovation.</p>
+            <a href="#about" class="btn btn-primary btn-lg me-3 shadow">Explore My Work</a>
+            <a href="https://www.linkedin.com/in/guillermo-pierobon" class="btn btn-outline-light btn-lg">Contact</a>
         </div>
     </header>
 
-    <section id="about" class="section-padding bg-light">
+    <section id="about" class="section-padding bg-custom-light">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-5 mb-4 mb-md-0 text-center">
+                <div class="col-md-5 mb-5 mb-md-0">
                     <img src="images/guillermo-oficina.jpg" alt="Guillermo Pierobon" class="profile-img">
                 </div>
                 <div class="col-md-7 ps-md-5">
-                    <h2 class="fw-bold mb-4">About Me</h2>
-                    <p class="lead">I am an Exploration Geologist with Tier-1 experience in Australia, specializing in turning complex geological data into actionable insights.</p>
-                    <p>During my time at <strong>Norton Gold Fields</strong>, I managed large-scale drilling programs where I discovered the power of data-driven decisions. Today, I combine my JORC-compliant field experience with a technical stack in <strong>Python, SQL, and Advanced Statistics</strong>.</p>
-                    <p class="mb-4">My goal is to optimize mineral exploration through automation and predictive modeling.</p>
+                    <h2 class="fw-bold mb-4 border-bottom pb-2" style="display: inline-block;">About Me</h2>
+                    <p class="lead mt-3">I am a Geologist driven by the challenge of transforming raw field data into strategic insights.</p>
+                    <p>My background combines <strong>Tier-1 operational experience</strong> in Western Australia with an advanced technical stack in <strong>Data Science (Python, SQL, Statistics)</strong>. I specialize in optimizing exploration workflows through automation and predictive modeling.</p>
                     
-                    <a href="CV-Guillermo-Pierobon.pdf" class="btn btn-primary btn-lg" download>
-                        <i class="bi bi-file-earmark-pdf-fill"></i> Download CV (PDF)
-                    </a>
+                    <div class="mt-4">
+                        <a href="CV-Guillermo-Pierobon.pdf" class="btn btn-primary btn-lg shadow-sm" download>
+                            <i class="bi bi-file-earmark-pdf-fill me-2"></i>Download Full CV
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="experience" class="section-padding bg-dark text-white">
-        <div class="container text-center">
-            <h2 class="fw-bold mb-4">The Australia Chapter</h2>
+        <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-8 mx-auto">
-                    <p class="lead mb-5">
-                        During my tenure at <strong>Norton Gold Fields (Paddington Operations)</strong> in Western Australia, 
-                        I led exploration and production programs in some of the world's most demanding environments.
-                    </p>
-                    <div class="row text-start mb-5">
-                        <div class="col-md-6 offset-md-3">
-                            <ul class="list-unstyled">
-                                <li><i class="bi bi-check-circle-fill text-primary"></i> <strong>5,000+ meters</strong> of DD & RC drilling supervised.</li>
-                                <li><i class="bi bi-check-circle-fill text-primary"></i> Fast-tracked to <strong>Junior Exploration Geologist</strong>.</li>
-                                <li><i class="bi bi-check-circle-fill text-primary"></i> Managed complex databases using <strong>acQuire & LogChief</strong>.</li>
-                                <li><i class="bi bi-check-circle-fill text-primary"></i> Applied strict <strong>JORC Code</strong> compliance.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="mt-2">
-                        <img src="images/australia-field.jpg" alt="Field Work Australia" class="img-fluid rounded shadow-lg border border-secondary" style="max-height: 450px;">
-                    </div>
+                <div class="col-md-6 mb-5 mb-md-0">
+                    <h2 class="fw-bold mb-4">The Australia Chapter</h2>
+                    <p class="lead text-secondary">Operational Excellence in the Goldfields.</p>
+                    <p>At <strong>Norton Gold Fields</strong>, I was responsible for high-pressure production environments and large-scale drilling programs.</p>
+                    <ul class="list-unstyled">
+                        <li class="mb-3"><i class="bi bi-check2-circle text-primary me-2"></i> <strong>Underground & Open Pit:</strong> Supervision of DD and RC programs.</li>
+                        <li class="mb-3"><i class="bi bi-check2-circle text-primary me-2"></i> <strong>Data Integrity:</strong> Managed acQuire/LogChief databases.</li>
+                        <li class="mb-3"><i class="bi bi-check2-circle text-primary me-2"></i> <strong>JORC Standards:</strong> 100% compliance in sampling and QA/QC.</li>
+                    </ul>
+                </div>
+                <div class="col-md-6 text-center">
+                    <img src="images/img-20231110-wa0063.jpg" alt="Underground Mining Supervision" class="australia-img">
+                    <p class="small text-muted mt-3 italic">Supervising underground drilling operations at Bullant Mine.</p>
                 </div>
             </div>
         </div>
@@ -121,7 +117,8 @@
 
     <footer class="footer text-center">
         <div class="container">
-            <p class="mb-0">© 2026 Guillermo Pierobon | Exploration Geologist & Data Explorer</p>
+            <p class="mb-2 text-white">Guillermo Pierobon</p>
+            <p class="mb-0 small">© 2026 | Geologist & Data Scientist</p>
         </div>
     </footer>
 
